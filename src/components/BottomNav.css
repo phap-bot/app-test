@@ -1,0 +1,74 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
+    padding-bottom: 20px;
+    /* Safe area for modern phones */
+    z-index: 1000;
+}
+
+.bottom-nav__item {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.bottom-nav__item--active {
+    opacity: 1;
+    color: #176FF2;
+}
+
+.bottom-nav__icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Icons - Using the same assets as before or new ones if needed. 
+   Assuming the previous CSS defined these classes with background-images, 
+   we might need to copy/adapt them here or rely on AppModern.css. 
+   For now, defining them here ensures self-containment if AppModern changes.
+*/
+.bottom-nav__icon--home {
+    background-image: url('https://www.figma.com/api/mcp/asset/8b115682-1275-430c-992a-360582ce078c');
+}
+
+.bottom-nav__item--active .bottom-nav__icon--home {
+    /* active state icon if different */
+}
+
+.bottom-nav__icon--ticket {
+    background-image: url('https://www.figma.com/api/mcp/asset/c4656461-12c8-4794-af08-33df4553f192');
+}
+
+.bottom-nav__icon--heart {
+    background-image: url('https://www.figma.com/api/mcp/asset/2d4eb2d2-ee0c-4602-a01b-2b9703ede97b');
+}
+
+.bottom-nav__icon--profile {
+    background-image: url('https://www.figma.com/api/mcp/asset/d5958040-cfc8-4e58-9477-802528731304');
+}
+
+.bottom-nav__label {
+    font-size: 10px;
+    font-weight: 500;
+}
